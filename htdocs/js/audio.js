@@ -20,5 +20,5 @@ function uploadFinish(e) {
 }
 
 function playbackAudio() {
-    $("#play_audio_button").play();
+    $("#videoAudio").get(0).play();
 }
