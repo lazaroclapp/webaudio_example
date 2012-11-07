@@ -33,7 +33,9 @@
 		<form id="video_upload_form" enctype="multipart/form-data" method="post" action="upload_videos_audio.php" style="visibility:hidden;position:absolute;top:-50;left:-50">
 		    <input name="camera-video" class="camera_hidden_input" id="hiddenInput" type="file" accept="video/*" onchange="uploadVideo()" />
         </form>
-		<audio id="videoAudio" style="visibility:hidden;position:absolute;top:-50;left:-50"></audio>
+		<audio id="videoAudio" style="visibility:hidden;position:absolute;top:-50;left:-50">
+		    <source id="wavSource" type="audio/wav" />
+		</audio>
 	
     </div><!-- /content -->
 

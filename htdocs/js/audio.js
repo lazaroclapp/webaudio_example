@@ -14,7 +14,9 @@ function uploadVideo() {
 	    
 function uploadFinish(e) {
     audio_id = parseInt(e.target.responseText);
-    $("#videoAudio").src = "audio_file.php?audio_id=" + audio_id;
+    $("#wavSource").attr('src',
+        "audio_file.php?audio_id=" + audio_id)
+        .detach().appendTo($("#videoAudio"));
     $("#record_audio_button").hide();
     $("#play_audio_button").show();
 }
