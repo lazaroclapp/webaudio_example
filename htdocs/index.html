@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<title>Audio recording example</title> 
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+ 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.css" />
+		
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery.mobile-1.2.0.js"></script>
+	
+	<script src="js/audio.js"></script>
+</head> 
+
+<body> 
+
+<!-- Start of first page: #one -->
+<div class="main_page" data-role="page" id="one">
+
+	<div class="header" data-role="header">
+		<h1>Audio recording example</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		
+		<p><a href="#" class="menu_button" id="record_audio_button" data-role="button" data-ajax="false" onClick="recordVideo();">Record a video</a></p>
+		<p><a href="#" class="menu_button" id="play_audio_button" data-role="button" data-ajax="false" onClick="playbackAudio();" style="display: None">Playback the audio</a></p>
+		
+		<form id="video_upload_form" enctype="multipart/form-data" method="post" action="upload_videos_audio.php" style="visibility:hidden;position:absolute;top:-50;left:-50">
+		    <input name="camera-video" class="camera_hidden_input" id="hiddenInput" type="file" accept="video/*" onchange="uploadVideo()" />
+        </form>
+		<audio id="videoAudio" style="visibility:hidden;position:absolute;top:-50;left:-50"></audio>
+	
+    </div><!-- /content -->
+
+</div>
+</body>
+</html>
